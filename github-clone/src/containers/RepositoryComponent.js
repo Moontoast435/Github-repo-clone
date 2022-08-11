@@ -5,18 +5,14 @@ const RepositoryComponent = () => {
   const repositories = useSelector(
     (state) => state.allRepositories.repositories
   );
-  const [showText, setShowText] = useState(false);
-  const handleText = () => {
+  const [showText, setShowText] = useState('');
+  const handleText = (id) => {
     console.log('clicked');
-    setShowText(!showText);
+    setShowText(id);
   };
   const renderList = repositories.map((repository, index) => {
     const {
       id,
-      title,
-      price,
-      category,
-      image,
       name,
       full_name,
       forks_count,
@@ -25,15 +21,15 @@ const RepositoryComponent = () => {
     } = repository;
     console.log(repository);
     return (
-      <div className="container mt-3" key={index}>
+      <div className="container mt-3" key={id}>
         <div className="card">
           <i>
-            <h5 style={{ cursor: 'pointer' }} onClick={handleText}>
+            <h5 style={{ cursor: 'pointer' }} onClick={() => {handleText(index)}}>
               {full_name}
             </h5>
           </i>
         </div>
-        {showText && (
+        {showText === index && (
           <div class="card">
             <div class="card-body">
               <h4 class="card-title">{name}</h4>
