@@ -2,9 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import Header from './containers/Header';
 import { Route, Router, Routes } from 'react-router-dom';
-import ProductDetail from './containers/ProductDetail';
+import RepositoryDetail from './containers/RepositoryDetail';
 import { BrowserRouter } from 'react-router-dom';
-import ProductListing from './containers/ProductListing';
+import RepositoryListing from './containers/RepositoryListing';
 
 function App() {
   return (
@@ -12,8 +12,8 @@ function App() {
       <Header />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<ProductListing />}></Route>
-          <Route path="/product" element={<ProductDetail />}></Route>
+          <Route path="/" element={<RepositoryListing />}></Route>
+          <Route path="/product" element={<RepositoryDetail />}></Route>
           <Route>404 Not Found</Route>
         </Routes>
       </BrowserRouter>
