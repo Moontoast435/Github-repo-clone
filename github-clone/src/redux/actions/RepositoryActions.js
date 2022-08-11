@@ -5,10 +5,3 @@ export const setRepositories = (repositories) => {
     payload: repositories,
   };
 };
-
-// export const selectedProduct = (product) => {
-//   return {
-//     type: ActionTypes.SELECTED_PRODUCT,
-//     payload: product,
-//   };
-// };

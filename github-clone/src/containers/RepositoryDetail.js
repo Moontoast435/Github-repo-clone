@@ -3,11 +3,7 @@ import { useSelector } from 'react-redux';
 
 const RepositoryDetail = () => {
   const repositories = useSelector((state) => state);
-  return (
-    <div>
-      <h1>RepositoryDetail</h1>
-    </div>
-  );
+  return <div></div>;
 };
 
 export default RepositoryDetail;
