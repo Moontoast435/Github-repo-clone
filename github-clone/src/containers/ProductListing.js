@@ -5,7 +5,7 @@ import { setProducts } from '../redux/actions/productActions';
 import ProductComponent from './ProductComponent';
 import ProductDetail from './ProductDetail';
 const ProductListing = () => {
-  const [username, setUsername] = useState('SampurnaC');
+  const [username, setUsername] = useState('');
   const products = useSelector((state) => state);
   const dispatch = useDispatch();
   const fetchProducts = async () => {
@@ -20,21 +20,19 @@ const ProductListing = () => {
   useEffect(() => {
     fetchProducts();
   }, []);
-  console.log('Products:', products);
 
   return (
     <div>
-      {/* <form onSubmit={handleSubmit}>
-        <label>
-          Enter your name:
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-        </label>
-        <input type="submit" />
-      </form> */}
+      <input
+        type="text"
+        placeholder="Search for User"
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
+        className="input_search"
+      />
+      <button onClick={fetchProducts} className="search_button">
+        Search Github
+      </button>
       <h1>ProductListing</h1>
       <ProductComponent />
     </div>
