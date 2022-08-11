@@ -30,10 +30,11 @@ const ProductListing = () => {
         onChange={(e) => setUsername(e.target.value)}
         className="input_search"
       />
-      <button onClick={fetchProducts} className="search_button">
+
+      <button onClick={fetchProducts} className="btn btn-primary">
         Search Github
       </button>
-      <h1>ProductListing</h1>
+      {/* {{ username } && <h3>Lists of repos for {username}</h3>} */}
       <ProductComponent />
     </div>
   );
