@@ -4,7 +4,9 @@ const Header = () => {
   return (
     <div className="ui fixed menu">
       <div className="ui container-center">
-        <h2>FakeShop</h2>
+        <p className="search-field">
+          Search Github reposotories using GitHub username
+        </p>
       </div>
     </div>
   );
