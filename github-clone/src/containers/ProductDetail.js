@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux';
 
 const ProductDetail = () => {
   const products = useSelector((state) => state);
-  console.log(products);
   return (
     <div>
       <h1>ProductDetail</h1>
