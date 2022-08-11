@@ -10,13 +10,8 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<RepositoryListing />}></Route>
-          <Route path="/product" element={<RepositoryDetail />}></Route>
-          <Route>404 Not Found</Route>
-        </Routes>
-      </BrowserRouter>
+      <RepositoryListing />
+      <RepositoryDetail />
     </div>
   );
 }
